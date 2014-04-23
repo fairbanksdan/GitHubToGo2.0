@@ -1,9 +1,53 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="3ov-7s-tfc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
+        <!--Sign In View Controller-->
+        <scene sceneID="2pM-OG-v0o">
+            <objects>
+                <viewController id="2iq-8X-GFO" customClass="SignInViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="01m-7C-Vdo"/>
+                        <viewControllerLayoutGuide type="bottom" id="LyC-sa-c3c"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9i5-N9-Omg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="waS-cF-Ato">
+                                <rect key="frame" x="115" y="492" width="91" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="28"/>
+                                <state key="normal" title="Sign In">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="signInButtonPressed:" destination="2iq-8X-GFO" eventType="touchUpInside" id="hfE-Gc-wSs"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="GitHub-Mark_White.png" translatesAutoresizingMaskIntoConstraints="NO" id="Rfg-75-DO4">
+                                <rect key="frame" x="-40" y="84" width="400" height="400"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="github-logo-white.png" translatesAutoresizingMaskIntoConstraints="NO" id="wG4-0O-AAX">
+                                <rect key="frame" x="40" y="-39" width="240" height="240"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.61960786581039429" green="0.85490202903747559" blue="0.93725496530532837" alpha="1" colorSpace="deviceRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ZWF-qS-IYk"/>
+                    <connections>
+                        <outlet property="signInButton" destination="waS-cF-Ato" id="4ZV-Zp-MqH"/>
+                        <segue destination="vXZ-lx-hvc" kind="push" identifier="GoToRoot" id="DGo-Gz-AeJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1BP-B7-Hr6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="152" y="109"/>
+        </scene>
         <!--Root Menu View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
@@ -34,13 +78,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="PeJ-cH-MSj"/>
                     <connections>
                         <outlet property="tableView" destination="DeW-St-6dR" id="8of-yQ-a7R"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="66" y="109"/>
+            <point key="canvasLocation" x="628" y="109"/>
         </scene>
         <!--Users View Controller-->
         <scene sceneID="zmq-6b-UK5">
@@ -111,7 +156,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uY1-yw-eUv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="550" y="109"/>
+            <point key="canvasLocation" x="1076" y="109"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="aR1-tg-LkJ">
@@ -181,7 +226,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H2u-Wv-RKb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="550" y="788"/>
+            <point key="canvasLocation" x="1076" y="804"/>
         </scene>
         <!--Search Detail View Controller-->
         <scene sceneID="0ZX-lD-rWh">
@@ -213,7 +258,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z5S-W7-jwT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1090" y="100"/>
+            <point key="canvasLocation" x="1620" y="109"/>
         </scene>
         <!--Repos View Controller-->
         <scene sceneID="pu3-W1-xdv">
@@ -283,10 +328,30 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CIQ-oe-Q0Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="550" y="-570"/>
+            <point key="canvasLocation" x="1076" y="-586"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dTe-aR-FmK">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Icf-N7-ypR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="3ov-7s-tfc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PMa-o6-t3T">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2iq-8X-GFO" kind="relationship" relationship="rootViewController" id="Arq-l2-Sei"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-374" y="109"/>
         </scene>
     </scenes>
     <resources>
+        <image name="GitHub-Mark_White.png" width="560" height="560"/>
+        <image name="github-logo-white.png" width="1200" height="1200"/>
         <image name="hamburger-icon.png" width="60" height="60"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -295,6 +360,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="VTu-mS-hqY"/>
+        <segue reference="WO3-E5-YLc"/>
     </inferredMetricsTieBreakers>
 </document>

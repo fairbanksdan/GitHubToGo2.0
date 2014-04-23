@@ -21,6 +21,7 @@
 @property (strong, nonatomic) NSMutableArray *repoArray;
 @property (strong, nonatomic) NSString *token;
 @property (strong, nonatomic) NSURLSession *urlSession;
+@property (nonatomic, copy) void (^completionOfOAuthAccess)();
 
 @end
 
@@ -35,17 +36,22 @@
         NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
         _urlSession = [NSURLSession sessionWithConfiguration:configuration];
         
+        self.token = [[NSUserDefaults standardUserDefaults] objectForKey:@"token"];
         configuration.allowsCellularAccess = YES;
     }
     
     return self;
 }
 
--(void)requestOAuthAccess
+-(void)requestOAuthAccess:(void(^)())completionOfOAuthAccess
 {
     NSString *urlString = [NSString stringWithFormat:GITHUB_OAUTH_URL,GITHUB_CLIENT_ID,GITHUB_CALLBACK_URI,@"user,repos"];
+    self.completionOfOAuthAccess = completionOfOAuthAccess;
     
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
+    [[UIApplication sharedApplication] performSelector:@selector(openURL:) withObject:[NSURL URLWithString:urlString] afterDelay:.1];
+    
+    //[[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
+   
 }
 
 
@@ -78,6 +84,11 @@
         self.token = [self convertResponseDataIntoToken:data];
         [[NSUserDefaults standardUserDefaults] setObject:self.token forKey:@"token"];
         [[NSUserDefaults standardUserDefaults] synchronize];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.completionOfOAuthAccess();
+        });
+        
     }];
     
     [postDataTask resume];
@@ -145,6 +156,16 @@
     
     
     [repoDataTask resume];
+}
+
+-(BOOL)checkForToken
+{
+    if (_token) {
+        return YES;
+    } else {
+        NSLog(@"You need to get a token first");
+        return NO;
+    }
 }
 
 @end

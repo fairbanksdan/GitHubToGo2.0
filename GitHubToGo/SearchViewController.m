@@ -39,8 +39,6 @@
     
     _repoArray = [NSMutableArray new];
     
-    [self.networkController requestOAuthAccess];
-    
     
     
 }

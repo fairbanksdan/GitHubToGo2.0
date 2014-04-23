@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D61576A719085CBF00BA9025 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = D61576A619085CBF00BA9025 /* User.m */; };
+		D61576AA1908633100BA9025 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D61576A91908633100BA9025 /* SignInViewController.m */; };
+		D61576AE190875E100BA9025 /* GitHub-Mark.png in Resources */ = {isa = PBXBuildFile; fileRef = D61576AD190875E100BA9025 /* GitHub-Mark.png */; };
+		D61576B0190876C000BA9025 /* GitHub-Mark_White.png in Resources */ = {isa = PBXBuildFile; fileRef = D61576AF190876C000BA9025 /* GitHub-Mark_White.png */; };
+		D61576B2190877F600BA9025 /* Octocat.png in Resources */ = {isa = PBXBuildFile; fileRef = D61576B1190877F600BA9025 /* Octocat.png */; };
+		D61576B41908793D00BA9025 /* github-logo-white.png in Resources */ = {isa = PBXBuildFile; fileRef = D61576B31908793D00BA9025 /* github-logo-white.png */; };
 		D6A6BE2019057D3600C6D14D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6A6BE1F19057D3600C6D14D /* Foundation.framework */; };
 		D6A6BE2219057D3600C6D14D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6A6BE2119057D3600C6D14D /* CoreGraphics.framework */; };
 		D6A6BE2419057D3600C6D14D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6A6BE2319057D3600C6D14D /* UIKit.framework */; };
@@ -42,6 +48,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D61576A519085CBF00BA9025 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = ../User.h; sourceTree = "<group>"; };
+		D61576A619085CBF00BA9025 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = ../User.m; sourceTree = "<group>"; };
+		D61576A81908633100BA9025 /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
+		D61576A91908633100BA9025 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
+		D61576AD190875E100BA9025 /* GitHub-Mark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GitHub-Mark.png"; sourceTree = "<group>"; };
+		D61576AF190876C000BA9025 /* GitHub-Mark_White.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GitHub-Mark_White.png"; sourceTree = "<group>"; };
+		D61576B1190877F600BA9025 /* Octocat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Octocat.png; sourceTree = "<group>"; };
+		D61576B31908793D00BA9025 /* github-logo-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "github-logo-white.png"; sourceTree = "<group>"; };
 		D6A6BE1C19057D3600C6D14D /* GitHubToGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubToGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6A6BE1F19057D3600C6D14D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D6A6BE2119057D3600C6D14D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -151,6 +165,10 @@
 		D6A6BE2619057D3600C6D14D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D61576B31908793D00BA9025 /* github-logo-white.png */,
+				D61576B1190877F600BA9025 /* Octocat.png */,
+				D61576AF190876C000BA9025 /* GitHub-Mark_White.png */,
+				D61576AD190875E100BA9025 /* GitHub-Mark.png */,
 				D6A6BE2719057D3600C6D14D /* GitHubToGo-Info.plist */,
 				D6A6BEAB1905A1BB00C6D14D /* hamburger-icon.png */,
 				D6A6BE2819057D3600C6D14D /* InfoPlist.strings */,
@@ -183,6 +201,8 @@
 			children = (
 				D6A6BEB01905C38300C6D14D /* Repo.h */,
 				D6A6BEB11905C38300C6D14D /* Repo.m */,
+				D61576A519085CBF00BA9025 /* User.h */,
+				D61576A619085CBF00BA9025 /* User.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -203,6 +223,8 @@
 				D6A6BE5819057E9500C6D14D /* ReposViewController.m */,
 				D6A6BE3419057D3600C6D14D /* ViewController.h */,
 				D6A6BE3519057D3600C6D14D /* ViewController.m */,
+				D61576A81908633100BA9025 /* SignInViewController.h */,
+				D61576A91908633100BA9025 /* SignInViewController.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -293,9 +315,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6A6BEAC1905A1BB00C6D14D /* hamburger-icon.png in Resources */,
+				D61576B0190876C000BA9025 /* GitHub-Mark_White.png in Resources */,
 				D6A6BE3819057D3600C6D14D /* Images.xcassets in Resources */,
 				D6A6BE2A19057D3600C6D14D /* InfoPlist.strings in Resources */,
+				D61576AE190875E100BA9025 /* GitHub-Mark.png in Resources */,
 				D6A6BE3319057D3600C6D14D /* Main.storyboard in Resources */,
+				D61576B2190877F600BA9025 /* Octocat.png in Resources */,
+				D61576B41908793D00BA9025 /* github-logo-white.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,8 +344,10 @@
 				D6A6BE5919057E9500C6D14D /* ReposViewController.m in Sources */,
 				D6A6BE3019057D3600C6D14D /* AppDelegate.m in Sources */,
 				D6A6BEB21905C38300C6D14D /* Repo.m in Sources */,
+				D61576AA1908633100BA9025 /* SignInViewController.m in Sources */,
 				D6A6BEB51906DFF400C6D14D /* NetworkController.m in Sources */,
 				D6A6BE5C19057ED200C6D14D /* UsersViewController.m in Sources */,
+				D61576A719085CBF00BA9025 /* User.m in Sources */,
 				D6A6BE2C19057D3600C6D14D /* main.m in Sources */,
 				D6A6BE5619057DBC00C6D14D /* RootMenuViewController.m in Sources */,
 				D6A6BE5F19057F0B00C6D14D /* SearchViewController.m in Sources */,
@@ -528,6 +556,7 @@
 				D6A6BE5019057D3600C6D14D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D6A6BE5119057D3600C6D14D /* Build configuration list for PBXNativeTarget "GitHubToGoTests" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +565,7 @@
 				D6A6BE5319057D3600C6D14D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

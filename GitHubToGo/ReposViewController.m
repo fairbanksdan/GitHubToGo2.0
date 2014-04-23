@@ -11,7 +11,7 @@
 #import "Repo.h"
 #import "SearchDetailViewController.h"
 
-@interface ReposViewController () <UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, NetworkControllerDelegate>
+@interface ReposViewController () <UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate>
 
 @property (strong, nonatomic) NSMutableArray *myRepoArray;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -36,7 +36,6 @@
     [super viewDidLoad];
     self.appDelegate = [UIApplication sharedApplication].delegate;
     self.networkController = self.appDelegate.networkController;
-    self.networkController.delegate = self;
     
     [self.networkController retrieveReposForCurrentUser:^(NSMutableArray *repos) {
         [self reposDoneDownloading:repos];
@@ -73,9 +72,9 @@
 -(void)reposDoneDownloading:(NSMutableArray *)currentUsersRepoArray
 {
     self.myRepoArray = currentUsersRepoArray;
-    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+    dispatch_async(dispatch_get_main_queue(), ^{
         [self.tableView reloadData];
-    }];
+    });
     
 }
 
