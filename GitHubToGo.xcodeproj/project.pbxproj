@@ -21,6 +21,14 @@
 		D6A6BE4119057D3600C6D14D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6A6BE2319057D3600C6D14D /* UIKit.framework */; };
 		D6A6BE4919057D3600C6D14D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D6A6BE4719057D3600C6D14D /* InfoPlist.strings */; };
 		D6A6BE4B19057D3600C6D14D /* GitHubToGoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A6BE4A19057D3600C6D14D /* GitHubToGoTests.m */; };
+		D6A6BE5619057DBC00C6D14D /* RootMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A6BE5519057DBC00C6D14D /* RootMenuViewController.m */; };
+		D6A6BE5919057E9500C6D14D /* ReposViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A6BE5819057E9500C6D14D /* ReposViewController.m */; };
+		D6A6BE5C19057ED200C6D14D /* UsersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A6BE5B19057ED200C6D14D /* UsersViewController.m */; };
+		D6A6BE5F19057F0B00C6D14D /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A6BE5E19057F0B00C6D14D /* SearchViewController.m */; };
+		D6A6BEAC1905A1BB00C6D14D /* hamburger-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D6A6BEAB1905A1BB00C6D14D /* hamburger-icon.png */; };
+		D6A6BEAF1905BEDF00C6D14D /* SearchDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A6BEAE1905BEDF00C6D14D /* SearchDetailViewController.m */; };
+		D6A6BEB21905C38300C6D14D /* Repo.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A6BEB11905C38300C6D14D /* Repo.m */; };
+		D6A6BEB51906DFF400C6D14D /* NetworkController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A6BEB41906DFF400C6D14D /* NetworkController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +61,22 @@
 		D6A6BE4619057D3600C6D14D /* GitHubToGoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GitHubToGoTests-Info.plist"; sourceTree = "<group>"; };
 		D6A6BE4819057D3600C6D14D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D6A6BE4A19057D3600C6D14D /* GitHubToGoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GitHubToGoTests.m; sourceTree = "<group>"; };
+		D6A6BE5419057DBC00C6D14D /* RootMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootMenuViewController.h; sourceTree = "<group>"; };
+		D6A6BE5519057DBC00C6D14D /* RootMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootMenuViewController.m; sourceTree = "<group>"; };
+		D6A6BE5719057E9500C6D14D /* ReposViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReposViewController.h; sourceTree = "<group>"; };
+		D6A6BE5819057E9500C6D14D /* ReposViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReposViewController.m; sourceTree = "<group>"; };
+		D6A6BE5A19057ED200C6D14D /* UsersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsersViewController.h; sourceTree = "<group>"; };
+		D6A6BE5B19057ED200C6D14D /* UsersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsersViewController.m; sourceTree = "<group>"; };
+		D6A6BE5D19057F0B00C6D14D /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		D6A6BE5E19057F0B00C6D14D /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		D6A6BE601905944C00C6D14D /* BurgerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BurgerProtocol.h; sourceTree = "<group>"; };
+		D6A6BEAB1905A1BB00C6D14D /* hamburger-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hamburger-icon.png"; sourceTree = "<group>"; };
+		D6A6BEAD1905BEDF00C6D14D /* SearchDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchDetailViewController.h; sourceTree = "<group>"; };
+		D6A6BEAE1905BEDF00C6D14D /* SearchDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchDetailViewController.m; sourceTree = "<group>"; };
+		D6A6BEB01905C38300C6D14D /* Repo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Repo.h; sourceTree = "<group>"; };
+		D6A6BEB11905C38300C6D14D /* Repo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Repo.m; sourceTree = "<group>"; };
+		D6A6BEB31906DFF400C6D14D /* NetworkController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkController.h; sourceTree = "<group>"; };
+		D6A6BEB41906DFF400C6D14D /* NetworkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,11 +136,12 @@
 		D6A6BE2519057D3600C6D14D /* GitHubToGo */ = {
 			isa = PBXGroup;
 			children = (
+				D6A6BEB61906FDE300C6D14D /* Model */,
+				D6A6BEB71906FDF600C6D14D /* View */,
+				D6A6BEB81906FE0700C6D14D /* Controller */,
 				D6A6BE2E19057D3600C6D14D /* AppDelegate.h */,
 				D6A6BE2F19057D3600C6D14D /* AppDelegate.m */,
-				D6A6BE3119057D3600C6D14D /* Main.storyboard */,
-				D6A6BE3419057D3600C6D14D /* ViewController.h */,
-				D6A6BE3519057D3600C6D14D /* ViewController.m */,
+				D6A6BE601905944C00C6D14D /* BurgerProtocol.h */,
 				D6A6BE3719057D3600C6D14D /* Images.xcassets */,
 				D6A6BE2619057D3600C6D14D /* Supporting Files */,
 			);
@@ -127,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				D6A6BE2719057D3600C6D14D /* GitHubToGo-Info.plist */,
+				D6A6BEAB1905A1BB00C6D14D /* hamburger-icon.png */,
 				D6A6BE2819057D3600C6D14D /* InfoPlist.strings */,
 				D6A6BE2B19057D3600C6D14D /* main.m */,
 				D6A6BE2D19057D3600C6D14D /* GitHubToGo-Prefix.pch */,
@@ -150,6 +176,44 @@
 				D6A6BE4719057D3600C6D14D /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D6A6BEB61906FDE300C6D14D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D6A6BEB01905C38300C6D14D /* Repo.h */,
+				D6A6BEB11905C38300C6D14D /* Repo.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		D6A6BEB71906FDF600C6D14D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D6A6BE3119057D3600C6D14D /* Main.storyboard */,
+				D6A6BEAD1905BEDF00C6D14D /* SearchDetailViewController.h */,
+				D6A6BEAE1905BEDF00C6D14D /* SearchDetailViewController.m */,
+				D6A6BE5419057DBC00C6D14D /* RootMenuViewController.h */,
+				D6A6BE5519057DBC00C6D14D /* RootMenuViewController.m */,
+				D6A6BE5D19057F0B00C6D14D /* SearchViewController.h */,
+				D6A6BE5E19057F0B00C6D14D /* SearchViewController.m */,
+				D6A6BE5A19057ED200C6D14D /* UsersViewController.h */,
+				D6A6BE5B19057ED200C6D14D /* UsersViewController.m */,
+				D6A6BE5719057E9500C6D14D /* ReposViewController.h */,
+				D6A6BE5819057E9500C6D14D /* ReposViewController.m */,
+				D6A6BE3419057D3600C6D14D /* ViewController.h */,
+				D6A6BE3519057D3600C6D14D /* ViewController.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		D6A6BEB81906FE0700C6D14D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D6A6BEB31906DFF400C6D14D /* NetworkController.h */,
+				D6A6BEB41906DFF400C6D14D /* NetworkController.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,6 +292,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6A6BEAC1905A1BB00C6D14D /* hamburger-icon.png in Resources */,
 				D6A6BE3819057D3600C6D14D /* Images.xcassets in Resources */,
 				D6A6BE2A19057D3600C6D14D /* InfoPlist.strings in Resources */,
 				D6A6BE3319057D3600C6D14D /* Main.storyboard in Resources */,
@@ -250,8 +315,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6A6BE3619057D3600C6D14D /* ViewController.m in Sources */,
+				D6A6BE5919057E9500C6D14D /* ReposViewController.m in Sources */,
 				D6A6BE3019057D3600C6D14D /* AppDelegate.m in Sources */,
+				D6A6BEB21905C38300C6D14D /* Repo.m in Sources */,
+				D6A6BEB51906DFF400C6D14D /* NetworkController.m in Sources */,
+				D6A6BE5C19057ED200C6D14D /* UsersViewController.m in Sources */,
 				D6A6BE2C19057D3600C6D14D /* main.m in Sources */,
+				D6A6BE5619057DBC00C6D14D /* RootMenuViewController.m in Sources */,
+				D6A6BE5F19057F0B00C6D14D /* SearchViewController.m in Sources */,
+				D6A6BEAF1905BEDF00C6D14D /* SearchDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
