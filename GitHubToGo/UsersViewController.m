@@ -10,12 +10,16 @@
 #import "AppDelegate.h"
 #import "Repo.h"
 #import "SearchDetailViewController.h"
+#import "User.h"
+#import "UserCollectionViewCell.h"
 
-@interface UsersViewController () <UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate>
+@interface UsersViewController () <UISearchBarDelegate, UICollectionViewDelegate, UICollectionViewDataSource>
 
 @property (strong, nonatomic) NSMutableArray *userArray;
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) AppDelegate *appDelegate;
+@property (nonatomic, strong) NSString *identifier;
+@property (nonatomic, strong) NSOperationQueue *imageQueue;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @end
 
@@ -33,6 +37,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.imageQueue = [NSOperationQueue new];
     
     self.appDelegate = [UIApplication sharedApplication].delegate;
     
@@ -65,41 +70,56 @@
     [self.userArray removeAllObjects];
     
     for (NSDictionary *repDict in tempArray) {
-        Repo *tempRepo = [Repo new];
+        User *user = [[User alloc] initWithJson:repDict];
         
-        tempRepo.name = [repDict objectForKey:@"login"];
-        tempRepo.html_url = [repDict objectForKey:@"html_url"];
-        
-        
-        [self.userArray addObject:tempRepo];
+        [self.userArray addObject:user];
     }
-    [self.tableView reloadData];
+    [self.collectionView reloadData];
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
+    [searchBar resignFirstResponder];
     [self usersForSearchString:searchBar.text];
     NSLog(@"%@", searchBar.text);
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     return self.userArray.count;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UserCell" forIndexPath:indexPath];
+    UserCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"UserCell" forIndexPath:indexPath];
+  
+        User *user = self.userArray[indexPath.row];
+        if (user.avatarImage)
+        {
+            
+            cell.imageView.image = user.avatarImage;
+        } else {
+            cell.imageView.image = [UIImage imageNamed:@"GitHub-Mark"];
+            [user downloadAvatarOnQueue:_imageQueue withCompletionBlock:^{
+                [collectionView reloadItemsAtIndexPaths:@[indexPath]];
+            }];
+        }
     
-    cell.textLabel.text = [self.userArray[indexPath.row] name];
+    cell.cellLabel.text = [self.userArray[indexPath.row] name];
     
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    
     if ([segue.identifier isEqualToString:@"showUserDetail"]) {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        NSIndexPath *indexPath = [[self.collectionView indexPathsForSelectedItems] lastObject];
         Repo *repo = [self.userArray objectAtIndex:indexPath.row];
         SearchDetailViewController *sdvc = (SearchDetailViewController *)segue.destinationViewController;
         sdvc.searchResultURL = repo.html_url;

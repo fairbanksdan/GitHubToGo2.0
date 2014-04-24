@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D61576A719085CBF00BA9025 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = D61576A619085CBF00BA9025 /* User.m */; };
 		D61576AA1908633100BA9025 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D61576A91908633100BA9025 /* SignInViewController.m */; };
 		D61576AE190875E100BA9025 /* GitHub-Mark.png in Resources */ = {isa = PBXBuildFile; fileRef = D61576AD190875E100BA9025 /* GitHub-Mark.png */; };
 		D61576B0190876C000BA9025 /* GitHub-Mark_White.png in Resources */ = {isa = PBXBuildFile; fileRef = D61576AF190876C000BA9025 /* GitHub-Mark_White.png */; };
@@ -35,6 +34,8 @@
 		D6A6BEAF1905BEDF00C6D14D /* SearchDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A6BEAE1905BEDF00C6D14D /* SearchDetailViewController.m */; };
 		D6A6BEB21905C38300C6D14D /* Repo.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A6BEB11905C38300C6D14D /* Repo.m */; };
 		D6A6BEB51906DFF400C6D14D /* NetworkController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A6BEB41906DFF400C6D14D /* NetworkController.m */; };
+		D6B642E819098CC800227E8F /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B642E719098CC800227E8F /* User.m */; };
+		D6B642EB1909BDDD00227E8F /* UserCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B642EA1909BDDD00227E8F /* UserCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,8 +49,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D61576A519085CBF00BA9025 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = ../User.h; sourceTree = "<group>"; };
-		D61576A619085CBF00BA9025 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = ../User.m; sourceTree = "<group>"; };
 		D61576A81908633100BA9025 /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
 		D61576A91908633100BA9025 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
 		D61576AD190875E100BA9025 /* GitHub-Mark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GitHub-Mark.png"; sourceTree = "<group>"; };
@@ -91,6 +90,10 @@
 		D6A6BEB11905C38300C6D14D /* Repo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Repo.m; sourceTree = "<group>"; };
 		D6A6BEB31906DFF400C6D14D /* NetworkController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkController.h; sourceTree = "<group>"; };
 		D6A6BEB41906DFF400C6D14D /* NetworkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkController.m; sourceTree = "<group>"; };
+		D6B642E619098CC800227E8F /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		D6B642E719098CC800227E8F /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		D6B642E91909BDDD00227E8F /* UserCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCollectionViewCell.h; sourceTree = "<group>"; };
+		D6B642EA1909BDDD00227E8F /* UserCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,8 +204,8 @@
 			children = (
 				D6A6BEB01905C38300C6D14D /* Repo.h */,
 				D6A6BEB11905C38300C6D14D /* Repo.m */,
-				D61576A519085CBF00BA9025 /* User.h */,
-				D61576A619085CBF00BA9025 /* User.m */,
+				D6B642E619098CC800227E8F /* User.h */,
+				D6B642E719098CC800227E8F /* User.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -211,6 +214,8 @@
 			isa = PBXGroup;
 			children = (
 				D6A6BE3119057D3600C6D14D /* Main.storyboard */,
+				D6B642E91909BDDD00227E8F /* UserCollectionViewCell.h */,
+				D6B642EA1909BDDD00227E8F /* UserCollectionViewCell.m */,
 				D6A6BEAD1905BEDF00C6D14D /* SearchDetailViewController.h */,
 				D6A6BEAE1905BEDF00C6D14D /* SearchDetailViewController.m */,
 				D6A6BE5419057DBC00C6D14D /* RootMenuViewController.h */,
@@ -347,8 +352,9 @@
 				D61576AA1908633100BA9025 /* SignInViewController.m in Sources */,
 				D6A6BEB51906DFF400C6D14D /* NetworkController.m in Sources */,
 				D6A6BE5C19057ED200C6D14D /* UsersViewController.m in Sources */,
-				D61576A719085CBF00BA9025 /* User.m in Sources */,
 				D6A6BE2C19057D3600C6D14D /* main.m in Sources */,
+				D6B642E819098CC800227E8F /* User.m in Sources */,
+				D6B642EB1909BDDD00227E8F /* UserCollectionViewCell.m in Sources */,
 				D6A6BE5619057DBC00C6D14D /* RootMenuViewController.m in Sources */,
 				D6A6BE5F19057F0B00C6D14D /* SearchViewController.m in Sources */,
 				D6A6BEAF1905BEDF00C6D14D /* SearchDetailViewController.m in Sources */,

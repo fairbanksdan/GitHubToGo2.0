@@ -82,6 +82,7 @@
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
+    [searchBar resignFirstResponder];
     [self reposForSearchString:searchBar.text];
     NSLog(@"%@", searchBar.text);
 }

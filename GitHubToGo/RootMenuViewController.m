@@ -57,13 +57,13 @@
     repoNav.navigationBarHidden = YES;
     
     UsersViewController *usersViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"users"];
-    usersViewController.title = @"Following";
+    usersViewController.title = @"Search Users";
     usersViewController.burgerDelegate = self;
     UINavigationController *userNav = [[UINavigationController alloc] initWithRootViewController:usersViewController];
     userNav.navigationBarHidden = YES;
     
     SearchViewController *searchViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"search"];
-    searchViewController.title = @"Search";
+    searchViewController.title = @"Search Repos";
     searchViewController.burgerDelegate = self;
     UINavigationController *searchNav = [[UINavigationController alloc] initWithRootViewController:searchViewController];
     searchNav.navigationBarHidden = YES;
