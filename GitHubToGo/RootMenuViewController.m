@@ -45,6 +45,8 @@
     
     self.tapToClose = [UITapGestureRecognizer new];
     
+    self.tableView.backgroundColor = [UIColor darkGrayColor];
+    
     
 }
 
@@ -217,7 +219,7 @@
 -(void)openMenu
 {
     [UIView animateWithDuration:.4 animations:^{
-        self.topViewController.view.frame = CGRectMake(self.view.frame.size.width * .75, self.view.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height);
+        self.topViewController.view.frame = CGRectMake(self.view.frame.size.width * .67, self.view.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height);
         
     } completion:^(BOOL finished) {
         
