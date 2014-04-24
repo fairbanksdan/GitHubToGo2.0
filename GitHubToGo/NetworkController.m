@@ -148,7 +148,7 @@
         [repos enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
             Repo *tempRepo = [Repo new];
             tempRepo.name = [obj objectForKey:@"name"];
-            tempRepo.html_url = [obj objectForKey:@"url"];
+            tempRepo.html_url = [obj objectForKey:@"html_url"];
             [tempArray addObject:tempRepo];
         }];
         completionBlock(tempArray);
