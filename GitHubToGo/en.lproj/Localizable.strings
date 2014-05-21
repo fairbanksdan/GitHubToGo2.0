@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  GitHubToGo
+
+  Created by Daniel Fairbanks on 5/21/14.
+  Copyright (c) 2014 Fairbanksdan. All rights reserved.
+*/
+
+
+"reposLanguage" = "My Repos";
+"usersLanguage" = "User Repos";
+"searchLanguage" = "Search Repos";

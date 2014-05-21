@@ -1,0 +1,24 @@
+
+/* Class = "IBUIButton"; normalTitle = "Button"; ObjectID = "F6v-dz-LLC"; */
+"F6v-dz-LLC.normalTitle" = "Button";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "LCD-7t-bgA"; */
+"LCD-7t-bgA.text" = "Label";
+
+/* Class = "IBUILabel"; text = "Search Repos"; ObjectID = "LSq-lU-KDD"; */
+"LSq-lU-KDD.text" = "Recherche Repos";
+
+/* Class = "IBUILabel"; text = "Search Users"; ObjectID = "Pdf-FH-fDE"; */
+"Pdf-FH-fDE.text" = "Recherche Users";
+
+/* Class = "IBUILabel"; text = "Title"; ObjectID = "e2X-Gw-Lyb"; */
+"e2X-Gw-Lyb.text" = "Titre";
+
+/* Class = "IBUILabel"; text = "My Repos"; ObjectID = "eL3-WR-SAf"; */
+"eL3-WR-SAf.text" = "Mon Repos";
+
+/* Class = "IBUIButton"; normalTitle = "Button"; ObjectID = "vn0-Mn-sFa"; */
+"vn0-Mn-sFa.normalTitle" = "Button";
+
+/* Class = "IBUIButton"; normalTitle = "Sign In"; ObjectID = "waS-cF-Ato"; */
+"waS-cF-Ato.normalTitle" = "Connectez-vous";

@@ -52,20 +52,24 @@
 
 -(void)setupChildrenViewControllers
 {
+    NSString *reposLanguage = NSLocalizedString(@"reposLanguage", nil);
+    NSString *searchLanguage = NSLocalizedString(@"searchLanguage", nil);
+    NSString *usersLanguage = NSLocalizedString(@"usersLanguage", nil);
+    
     ReposViewController *repoViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"repos"];
-    repoViewController.title = @"My Repos";
+    repoViewController.title = [NSString stringWithFormat:@"%@", reposLanguage];
     repoViewController.burgerDelegate = self;
     UINavigationController *repoNav = [[UINavigationController alloc] initWithRootViewController:repoViewController];
     repoNav.navigationBarHidden = YES;
     
     UsersViewController *usersViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"users"];
-    usersViewController.title = @"Search Users";
+    usersViewController.title = [NSString stringWithFormat:@"%@", usersLanguage];
     usersViewController.burgerDelegate = self;
     UINavigationController *userNav = [[UINavigationController alloc] initWithRootViewController:usersViewController];
     userNav.navigationBarHidden = YES;
     
     SearchViewController *searchViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"search"];
-    searchViewController.title = @"Search Repos";
+    searchViewController.title = [NSString stringWithFormat:@"%@", searchLanguage];
     searchViewController.burgerDelegate = self;
     UINavigationController *searchNav = [[UINavigationController alloc] initWithRootViewController:searchViewController];
     searchNav.navigationBarHidden = YES;
