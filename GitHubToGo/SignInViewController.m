@@ -36,6 +36,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (BOOL)prefersStatusBarHidden
+{
+    return YES;
+}
+
 - (IBAction)signInButtonPressed:(UIButton *)sender
 {
     [self.networkController requestOAuthAccess:^{

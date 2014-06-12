@@ -38,9 +38,6 @@
     self.networkController = self.appDelegate.networkController;
     
     _repoArray = [NSMutableArray new];
-    
-    
-    
 }
 
 - (void)didReceiveMemoryWarning

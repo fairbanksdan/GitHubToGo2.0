@@ -45,9 +45,7 @@
     
     self.tapToClose = [UITapGestureRecognizer new];
     
-    self.tableView.backgroundColor = [UIColor darkGrayColor];
-    
-    
+//    self.tableView.backgroundColor = [UIColor colorWithRed:100 green:100 blue:100 alpha:1];
 }
 
 -(void)setupChildrenViewControllers

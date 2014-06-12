@@ -13,6 +13,8 @@
 #import "User.h"
 #import "UserCollectionViewCell.h"
 
+@class MyCustomCell;
+
 @interface UsersViewController () <UISearchBarDelegate, UICollectionViewDelegate, UICollectionViewDataSource>
 
 @property (strong, nonatomic) NSMutableArray *userArray;
@@ -91,6 +93,7 @@
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    
     UserCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"UserCell" forIndexPath:indexPath];
   
         User *user = self.userArray[indexPath.row];
