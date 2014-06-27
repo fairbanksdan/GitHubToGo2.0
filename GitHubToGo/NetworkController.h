@@ -14,7 +14,7 @@
 
 -(void)retrieveReposForCurrentUser:(void(^)(NSMutableArray *repos))completionBlock;
 
--(void)requestOAuthAccess:(void(^)())completionOfOAuthAccess;
+-(void)requestOAuthAccess:(id)sender withCompletion:(void(^)())completionOfOAuthAccess;
 
 -(BOOL)checkForToken;
 

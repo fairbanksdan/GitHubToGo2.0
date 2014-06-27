@@ -22,6 +22,7 @@
 @property (strong, nonatomic) NSString *token;
 @property (strong, nonatomic) NSURLSession *urlSession;
 @property (nonatomic, copy) void (^completionOfOAuthAccess)();
+@property (strong, nonatomic) UIWebView *webView;
 
 @end
 
@@ -43,17 +44,38 @@
     return self;
 }
 
--(void)requestOAuthAccess:(void(^)())completionOfOAuthAccess
+-(void)requestOAuthAccess:(id)sender withCompletion:(void(^)())completionOfOAuthAccess
 {
     NSString *urlString = [NSString stringWithFormat:GITHUB_OAUTH_URL,GITHUB_CLIENT_ID,GITHUB_CALLBACK_URI,@"user,repos"];
     self.completionOfOAuthAccess = completionOfOAuthAccess;
     
-    [[UIApplication sharedApplication] performSelector:@selector(openURL:) withObject:[NSURL URLWithString:urlString] afterDelay:.1];
+    UIViewController *presentingVC = (UIViewController *)sender;
     
-    //[[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
-   
+    self.webView = [[UIWebView alloc] initWithFrame:presentingVC.view.frame];
+    self.webView.backgroundColor = [UIColor darkGrayColor];
+
+    UIToolbar *toolBar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, presentingVC.view.frame.size.height-44.0, 320, 44)];
+    UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelWebView)];
+    [toolBar setItems:@[cancelButton]];
+    [self.webView addSubview:toolBar];
+    
+    self.webView.transform = CGAffineTransformTranslate(self.webView.transform, 0.0, presentingVC.view.frame.size.height);
+    [presentingVC.view addSubview:self.webView];
+    NSURLRequest *authRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:urlString]];
+    [self.webView loadRequest:authRequest];
+
+    [UIView animateWithDuration:0.4 animations:^{
+        self.webView.transform = CGAffineTransformTranslate(self.webView.transform, 0.0, -presentingVC.view.frame.size.height);
+    }];
 }
 
+- (void)cancelWebView {
+    [UIView animateWithDuration:0.4 animations:^{
+        self.webView.transform = CGAffineTransformTranslate(self.webView.transform, 0, self.webView.frame.size.height);
+    } completion:^(BOOL finished) {
+        [self.webView removeFromSuperview];
+    }];
+}
 
 -(void)handleOAuthCallbackWithURL:(NSURL *)url
 {

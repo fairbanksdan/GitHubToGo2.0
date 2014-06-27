@@ -43,7 +43,7 @@
 
 - (IBAction)signInButtonPressed:(UIButton *)sender
 {
-    [self.networkController requestOAuthAccess:^{
+    [self.networkController requestOAuthAccess:self withCompletion:^{
         [self performSegueWithIdentifier:@"GoToRoot" sender:self];
     }];
 }
