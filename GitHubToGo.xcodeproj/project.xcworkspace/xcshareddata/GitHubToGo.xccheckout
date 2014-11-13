@@ -5,34 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>C7D01C4A-FC21-4152-8C02-8F09890B7DB4</string>
+	<string>C4BBF0D9-0CFA-473B-A131-3A50CD939ACC</string>
 	<key>IDESourceControlProjectName</key>
 	<string>GitHubToGo</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>3A4C73A0-A615-45D2-B539-5A4F0B75E724</key>
+		<key>20028C731EA7250AB26CAAC3C64421E1BB9BC9E2</key>
 		<string>https://github.com/fairbanksdan/GitHubToGo2.0.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>GitHubToGo.xcodeproj/project.xcworkspace</string>
+	<string>GitHubToGo.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>3A4C73A0-A615-45D2-B539-5A4F0B75E724</key>
+		<key>20028C731EA7250AB26CAAC3C64421E1BB9BC9E2</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/fairbanksdan/GitHubToGo2.0.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>3A4C73A0-A615-45D2-B539-5A4F0B75E724</string>
+	<string>20028C731EA7250AB26CAAC3C64421E1BB9BC9E2</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>3A4C73A0-A615-45D2-B539-5A4F0B75E724</string>
+			<string>20028C731EA7250AB26CAAC3C64421E1BB9BC9E2</string>
 			<key>IDESourceControlWCCName</key>
 			<string>GitHubToGo</string>
 		</dict>

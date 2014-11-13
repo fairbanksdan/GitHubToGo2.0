@@ -86,7 +86,6 @@
     NSString *postLength = [NSString stringWithFormat:@"%lu",(unsigned long)[postData length]];
     
     NSURLSessionConfiguration *sessionConfiguration = [NSURLSessionConfiguration defaultSessionConfiguration];
-    //sessionConfiguration.HTTPAdditionalHeaders = @"(Authorization:": @"")
     NSURLSession *session = [NSURLSession sessionWithConfiguration:sessionConfiguration];
     NSMutableURLRequest *request = [NSMutableURLRequest new];
     [request setURL:[NSURL URLWithString:@"https://github.com/login/oauth/access_token"]];
@@ -142,9 +141,7 @@
 -(void)retrieveReposForCurrentUser:(void(^)(NSMutableArray *repos))completionBlock
 {
     NSURL *userRepoURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@user/repos",GITHUB_API_URL]];
-    
-//    NSURLSessionConfiguration *sessionConfiguration = [NSURLSessionConfiguration defaultSessionConfiguration];
-//    NSURLSession *session = [NSURLSession sessionWithConfiguration:sessionConfiguration];
+
     NSMutableURLRequest *request = [NSMutableURLRequest new];
     [request setURL:userRepoURL];
     [request setHTTPMethod:@"GET"];
@@ -157,15 +154,6 @@
         NSLog(@"%@",repos);
         
         NSMutableArray *tempArray = [NSMutableArray new];
-        
-//        for (NSDictionary *repoDictionary in repos) {
-//            Repo *tempRepo = [Repo new];
-//            
-//            tempRepo.name = [repoDictionary objectForKey:@"name"];
-//            tempRepo.html_url = [repoDictionary objectForKey:@"url"];
-//            
-//            [tempArray addObject:tempRepo];
-//        }
         
         [repos enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
             Repo *tempRepo = [Repo new];

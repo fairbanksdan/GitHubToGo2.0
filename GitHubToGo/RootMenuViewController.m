@@ -23,15 +23,6 @@
 
 @implementation RootMenuViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -44,8 +35,6 @@
     [self setupChildrenViewControllers];
     
     self.tapToClose = [UITapGestureRecognizer new];
-    
-//    self.tableView.backgroundColor = [UIColor colorWithRed:100 green:100 blue:100 alpha:1];
 }
 
 -(void)setupChildrenViewControllers
@@ -77,7 +66,7 @@
     self.topViewController = self.arrayOfViewControllers[0];
     
     [self addChildViewController:self.topViewController];
-    //self.topViewController.view.frame = self.view.frame;
+
     [self.view addSubview:self.topViewController.view];
     [self.topViewController didMoveToParentViewController:self];
     
@@ -100,25 +89,13 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 -(void)movePanel:(id)sender
 {
     UIPanGestureRecognizer *pan = (UIPanGestureRecognizer*)sender;
     
-    //[[[pan view] layer] removeAllAnimations];
-    
     CGPoint translatedPoint = [pan translationInView:self.view];
-    //CGPoint velocity = [pan velocityInView:self.view];
-    
-    //NSLog(@" translation: %@", NSStringFromCGPoint(translatedPoint));
-   // NSLog(@" translation: %@", NSStringFromCGPoint(velocity));
-    
-    if (pan.state == UIGestureRecognizerStateBegan)
-    {
-        //self.topViewController.view.center = CGpointMake
-    }
     
     if (pan.state == UIGestureRecognizerStateChanged)
     {
@@ -248,15 +225,5 @@
         [self openMenu];
     }
 }
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
