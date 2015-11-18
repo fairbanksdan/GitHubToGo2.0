@@ -54,7 +54,7 @@
     self.webView = [[UIWebView alloc] initWithFrame:presentingVC.view.frame];
     self.webView.backgroundColor = [UIColor darkGrayColor];
 
-    UIToolbar *toolBar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, presentingVC.view.frame.size.height-44.0, 320, 44)];
+    UIToolbar *toolBar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, presentingVC.view.frame.size.height-44.0, presentingVC.view.frame.size.width, 44)];
     UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelWebView)];
     [toolBar setItems:@[cancelButton]];
     [self.webView addSubview:toolBar];

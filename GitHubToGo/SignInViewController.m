@@ -14,6 +14,7 @@
 
 @property (weak, nonatomic) AppDelegate *appdelegate;
 @property (weak, nonatomic) NetworkController *networkController;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *GitHubLogoVerticalContraint;
 
 @end
 
@@ -27,6 +28,11 @@
     
     if ([self.networkController checkForToken]) {
         [self performSegueWithIdentifier:@"GoToRoot" sender:self];
+    }
+    
+    if (self.view.frame.size.height == 480.0) {
+        NSLog(@"iPhone 4");
+        self.GitHubLogoVerticalContraint.constant = -130.0;
     }
 }
 

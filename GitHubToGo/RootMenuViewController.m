@@ -108,6 +108,7 @@
     
     if (pan.state == UIGestureRecognizerStateEnded)
     {
+        
         if (self.topViewController.view.frame.origin.x > self.view.frame.size.width / 3)
         {
             [UIView animateWithDuration:.4 animations:^{
@@ -119,6 +120,7 @@
                      
                  [self.topViewController.view addGestureRecognizer:self.tapToClose];
                  self.menuIsOpen = YES;
+                     self.tableView.userInteractionEnabled = YES;
                  }
              }];
         }
